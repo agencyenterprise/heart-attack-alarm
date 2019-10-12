@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         content.categoryIdentifier = "alarm"
         content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: getSound()))
         
-        let interval = TimeInterval(Int.random(in: 10...Int(timeSlider.value)))
+        let interval = TimeInterval(Int.random(in: 1..<Int(timeSlider.value)))
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
 
